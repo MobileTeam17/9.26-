@@ -34,7 +34,7 @@ class addNewBook: UIViewController,  UIBarPositioningDelegate, UITextFieldDelega
     @IBOutlet weak var newBookName: UITextField!
 
     
-    var bookId = UserDefaults.standard.string(forKey: "selectedBookId")!
+    var bookId = ""
     
     
     var bool = "false"
