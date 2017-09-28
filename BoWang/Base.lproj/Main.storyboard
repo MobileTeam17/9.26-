@@ -531,7 +531,7 @@
                     <navigationItem key="navigationItem" id="Dra-e8-4m0">
                         <barButtonItem key="leftBarButtonItem" title="Users" id="Uxv-Yb-9qm">
                             <connections>
-                                <segue destination="jdn-xj-sel" kind="push" id="69O-FB-Npu"/>
+                                <segue destination="jdn-xj-sel" kind="push" identifier="userPage" id="69O-FB-Npu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="8d8-ad-Ulu">
@@ -870,9 +870,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ls6-Cw-kF1"/>
-        <segue reference="gLU-g7-1Z2"/>
-        <segue reference="ox0-Cs-pdq"/>
+        <segue reference="prC-s8-0ff"/>
+        <segue reference="69O-FB-Npu"/>
         <segue reference="7V7-Sp-cwL"/>
+        <segue reference="gLU-g7-1Z2"/>
     </inferredMetricsTieBreakers>
 </document>
