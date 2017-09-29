@@ -49,6 +49,7 @@ class ShareBill: UIViewController,  UIBarPositioningDelegate, UITextFieldDelegat
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let client2 = delegate.client
+        var username : [String] = [String]()
         itemTable = client2.table(withName: "billListAndDetails")
         itemTable.read { (result, error) in
             if let err = error {
@@ -72,24 +73,39 @@ class ShareBill: UIViewController,  UIBarPositioningDelegate, UITextFieldDelegat
                                 if !self.list.contains(self.dicClient){
                                     self.list.add(self.dicClient)
                                 }
+                                    
+                                if (item["spendBy"] != nil) && !(username.contains(item["spendBy"] as!  String )){
+                                        username.append(item["spendBy"] as! String)
+                                        //print(username)
+                                }
+                                
+                                
+                                
                             }
                         }
                     }
-                    self.SUM.text = String(self.sum)
-//                    
-//                    var user = NSMutableArray()
-//                    for u in user{
-//                        
-//                        if (self.dicClient["spendBy"] != nil) && !(array.contains(self.dicClient["spendBy"] as! String )){
-//                            print(self.dicClient["spendBy"] as! String)
-//                            array.add(self.dicClient["spendBy"] as! String)
-//                            print(array)
-//                    }
                     
-                    //print(array)
+                    
                 }
               
             }
+            self.SUM.text = String(self.sum)
+            print(username)
+            print(username.count)
+            var count = username.count
+            let items = result?.items
+            var spend : [Double] = [Double]()
+            for index in 1...count{
+                spend[index-1] = 0
+                for item in items!{
+                    if(item["spendBy"] as! String == username[index-1] ){
+                        spend[index-1] += Double(item["theCost"] as! String)!
+                    }
+                }
+                
+            }
+            print(spend)
+            
         }
         
         print("the transfer bookid is : ", self.bookId)
