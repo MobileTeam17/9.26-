@@ -40,6 +40,7 @@ class LoginViewController: UIViewController,  UIBarPositioningDelegate, UITextFi
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        clearAllUserDefaultsData()
         print("99999999999999999999999999")
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -73,6 +74,18 @@ class LoginViewController: UIViewController,  UIBarPositioningDelegate, UITextFi
 
         
     }
+    
+    func clearAllUserDefaultsData(){
+        let userDefaults = UserDefaults.standard
+        let dics = userDefaults.dictionaryRepresentation()
+        for key in dics {
+            userDefaults.removeObject(forKey: key.key)
+        }
+        userDefaults.synchronize()
+    }
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()

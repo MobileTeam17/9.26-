@@ -595,7 +595,7 @@
                     <navigationItem key="navigationItem" id="Dra-e8-4m0">
                         <barButtonItem key="leftBarButtonItem" title="Users" id="Uxv-Yb-9qm">
                             <connections>
-                                <segue destination="jdn-xj-sel" kind="push" id="69O-FB-Npu"/>
+                                <segue destination="jdn-xj-sel" kind="push" identifier="userPage" id="69O-FB-Npu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="8d8-ad-Ulu">

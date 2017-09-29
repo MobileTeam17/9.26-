@@ -32,7 +32,7 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
     var dicClient = [String:Any]()
     var refresh : UIRefreshControl!
     var theValue = ""
-    var bookId = UserDefaults.standard.string(forKey: "selectedBookId")!
+    var bookId = ""
     var loginName = UserDefaults.standard.string(forKey: "userRegistEmail")
     var owner = ""
     var itemTable = (UIApplication.shared.delegate as! AppDelegate).client.table(withName: "book_users")
@@ -44,8 +44,9 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let client2 = delegate.client
         itemTable = client2.table(withName: "book_users")
-        
-        
+        if UserDefaults.standard.string(forKey: "selectedBookId") != nil{
+            bookId = UserDefaults.standard.string(forKey: "selectedBookId")!
+        }
         
         //hello.text = "  hello:  \(loginName!) !  welcome to the app"
         refresh = UIRefreshControl()
@@ -60,8 +61,10 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
         tableView.delegate = self
         refresh.addTarget(self,action:#selector(billListAndDetail.refreshData(_:)), for: UIControlEvents.valueChanged)
         
+        if UserDefaults.standard.string(forKey: "selectedBookId") != nil{
+            UserDefaults.standard.set(bookId, forKey: "selectedBookId")
+        }
         
-        UserDefaults.standard.set(bookId, forKey: "selectedBookId")
         
         
         
@@ -206,9 +209,7 @@ class userListPage: UITableViewController, ToDoItemDelegate2 {
         
     }
     
-    
-    
-    
+
     @IBAction func back(_ sender: UIBarButtonItem) {
         //self.dismiss(animated: true, completion: nil)
         UserDefaults.standard.set(bookId, forKey: "selectedBookId")

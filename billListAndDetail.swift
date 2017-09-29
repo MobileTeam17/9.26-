@@ -202,11 +202,26 @@ class billListAndDetail: UITableViewController, ToDoItemDelegate  {
         if(segue.identifier == "userPage") {
             
             let todoController = segue.destination as! userListPage
+            if self.bookId == ""{
+                displayMyAlertMessage(userMessage: "select a account book first!")
+                return
+            }
+            else{
             todoController.bookId = self.bookId
+            }
             
         }
     }
     
+    func displayMyAlertMessage(userMessage: String)  {
+        let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+    }
     
     // MARK: - ToDoItemDelegate
     
