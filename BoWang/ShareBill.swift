@@ -74,7 +74,7 @@ class ShareBill: UIViewController,  UIBarPositioningDelegate, UITextFieldDelegat
                                     self.list.add(self.dicClient)
                                 }
                                     
-                                if (item["spendBy"] != nil) && !(username.contains(item["spendBy"] as!  String )){
+                                if ("\(item["accountBookId"]!)" == self.bookId) && (item["spendBy"] != nil) && !(username.contains(item["spendBy"] as!  String )){
                                         username.append(item["spendBy"] as! String)
                                         //print(username)
                                 }
@@ -92,17 +92,24 @@ class ShareBill: UIViewController,  UIBarPositioningDelegate, UITextFieldDelegat
             self.SUM.text = String(self.sum)
             print(username)
             print(username.count)
+            
             var count = username.count
             let items = result?.items
             var spend : [Double] = [Double]()
-            for index in 1...count{
-                spend[index-1] = 0
-                for item in items!{
-                    if(item["spendBy"] as! String == username[index-1] ){
-                        spend[index-1] += Double(item["theCost"] as! String)!
+            if count != 0{
+                for index in 1...count{
+                    spend.append(0)
+                    for item in items!{
+                        if ("\(item["accountBookId"]!)" == self.bookId) && (item["spendBy"] as! String == username[index-1] ){
+                            print("begin  \(item["spendBy"])  \(item["theCost"])")
+                            var sum = spend.last
+                            var new = sum! + Double(item["theCost"] as! String!)!
+                            spend.removeLast()
+                            spend.append(new)
                     }
                 }
                 
+                }
             }
             print(spend)
             
