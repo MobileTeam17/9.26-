@@ -22,6 +22,7 @@
 		A2D9CBCE1943C2540017F096 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2D9CBCD1943C2540017F096 /* Images.xcassets */; };
 		A31A89F71BF3FDFA00C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */; };
 		A3BBD77D1C05181600DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */; };
+		E9552A551F7F47A700708B3A /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9552A541F7F47A700708B3A /* photo.swift */; };
 		E9961BE91F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9961BE71F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld */; };
 		E9961BEB1F73C3CB008F29A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961BEA1F73C3CB008F29A9 /* LoginViewController.swift */; };
 		E9961BED1F73C569008F29A9 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9961BEC1F73C569008F29A9 /* signupViewController.swift */; };
@@ -48,6 +49,7 @@
 		A2D9CBE81943D1340017F096 /* BoWang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoWang-Bridging-Header.h"; sourceTree = "<group>"; };
 		A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		E9552A541F7F47A700708B3A /* photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
 		E9961BE81F7382A1008F29A9 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E9961BEA1F73C3CB008F29A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9961BEC1F73C569008F29A9 /* signupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				2D1694131F78B2BC00825E49 /* addNewBook.swift */,
 				FE40247E1F7C9A3600CFBFAD /* Report.swift */,
 				FE4024801F7C9A5500CFBFAD /* ShareBill.swift */,
+				E9552A541F7F47A700708B3A /* photo.swift */,
 			);
 			path = BoWang;
 			sourceTree = "<group>";
@@ -173,7 +176,7 @@
 				TargetAttributes = {
 					A2D9CBBD1943C2540017F096 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = F58LPK4J4A;
+						DevelopmentTeam = PHYEHS64HS;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -224,6 +227,7 @@
 				2D1694141F78B2BC00825E49 /* addNewBook.swift in Sources */,
 				2D8A54131F755DE1002BDDC2 /* addNewBill.swift in Sources */,
 				2D1E65991F75FE1700AF1ABC /* userListPage.swift in Sources */,
+				E9552A551F7F47A700708B3A /* photo.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
 				FE40247F1F7C9A3600CFBFAD /* Report.swift in Sources */,
 				FE4024811F7C9A5500CFBFAD /* ShareBill.swift in Sources */,
@@ -339,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = F58LPK4J4A;
+				DEVELOPMENT_TEAM = PHYEHS64HS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -360,7 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = F58LPK4J4A;
+				DEVELOPMENT_TEAM = PHYEHS64HS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
