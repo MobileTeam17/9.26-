@@ -120,10 +120,10 @@ class signupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        list =  UserDefaults.standard.array(forKey: "theUserData") as! NSMutableArray
+        array =  (UserDefaults.standard.array(forKey: "theUserData")) as! [AnyObject]
         print("aaaaaaaaaaa: ", UserDefaults.standard.array(forKey: "theUserData"))
         print("bbbbbbbbbbbbb: ", UserDefaults.standard.array(forKey: "theEmailData"))
-        list2 = UserDefaults.standard.array(forKey: "theEmailData") as! NSMutableArray
+        array2 = UserDefaults.standard.array(forKey: "theEmailData") as! [AnyObject]
 
     }
 
