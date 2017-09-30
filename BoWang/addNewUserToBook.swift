@@ -154,7 +154,7 @@ class addNewUserToBook: UIViewController,  UIBarPositioningDelegate, UITextField
         }
         
         var aa = NSMutableArray()
-
+        
         var strr = ""
 
         if (userName == ""){
@@ -165,6 +165,12 @@ class addNewUserToBook: UIViewController,  UIBarPositioningDelegate, UITextField
         }
 
         var str = "a"+strr
+        
+        var dicClient = UserDefaults.standard.array(forKey: str)
+        
+        aa = dicClient as! NSMutableArray
+        
+
 
         
         if (userName == "" &&
