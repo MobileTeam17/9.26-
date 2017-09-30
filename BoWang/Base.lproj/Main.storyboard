@@ -599,11 +599,20 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Dra-e8-4m0">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Users" id="Uxv-Yb-9qm">
                             <connections>
                                 <segue destination="jdn-xj-sel" kind="push" identifier="userPage" id="69O-FB-Npu"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uLN-Nd-Ag2">
+                            <rect key="frame" x="117" y="7" width="142" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="photo"/>
+                            <connections>
+                                <segue destination="H3Q-Ob-uSa" kind="presentation" id="ElR-Hf-p4g"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="8d8-ad-Ulu">
                             <connections>
                                 <segue destination="tQF-Jh-ekm" kind="push" id="Sau-nX-WYU"/>
@@ -774,14 +783,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzV-8K-N35">
-                                <rect key="frame" x="20" y="455" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="photo"/>
-                                <connections>
-                                    <segue destination="H3Q-Ob-uSa" kind="presentation" id="ALH-1T-o8c"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
