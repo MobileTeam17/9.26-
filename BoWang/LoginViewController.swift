@@ -10,6 +10,8 @@
 //test for uploader at github 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 protocol ToDoItemDelegate4 {
     func didSaveItem(_ theUser: String, _ bookId: String)
@@ -34,13 +36,17 @@ class LoginViewController: UIViewController,  UIBarPositioningDelegate, UITextFi
     var list = NSMutableArray()
     var list2 = NSMutableArray()
     var list3 = NSMutableArray()
+    
     var dicClient = [String:Any]()
     var dicClient2 = [String:Any]()
-    
+    var dicClient3 = [String:Any]()
     override func viewDidLoad()
     {
+        
+        
         super.viewDidLoad()
-        clearAllUserDefaultsData()
+        
+        observeMessages()
         print("99999999999999999999999999")
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -71,9 +77,68 @@ class LoginViewController: UIViewController,  UIBarPositioningDelegate, UITextFi
         print("nnnnnnnnnnnn : ", list2)
         
         
-
-        
     }
+    
+    func observeMessages(){
+        
+        let ref = Database.database().reference().child("message")
+        ref.observe(.childAdded, with: { (DataSnapshot) in
+            
+
+            
+            let theMessage = "\(DataSnapshot.value!)" as? String
+            var key = "\(DataSnapshot.key)" as? String
+            self.dicClient3[key!] = theMessage
+
+            print("bbggbgb", DataSnapshot.key)
+            
+            if key  == "text"{
+                self.dicClient3["text"] = theMessage
+
+            }
+            if key  == "toId" {
+                self.dicClient3["toId"] = theMessage
+            }
+            if key  == "fromId" {
+                self.dicClient3["text"] = ""
+            }
+            if (self.dicClient3["text"] as? String == "" ||
+                self.dicClient3["toId"] as? String == "" ||
+                self.dicClient3["fromId"] as? String == "") {
+                var dicClient3 = [String:Any]()
+            }
+            
+        
+            self.list3.add(self.dicClient3)
+            
+            print("bowang11111111", self.list3.lastObject)
+            let fff = self.list3.lastObject as? [String:Any]
+            if (fff?["text"] as? String != "" &&
+                fff?["toId"] as? String != "" &&
+                fff?["fromId"] as? String != "") {
+                
+                print("vfvfvfvfvfvfv", self.list3.lastObject )
+                
+                
+                self.dicClient3["text"] = fff?["text"]
+                self.dicClient3["toId"] = fff?["toId"]
+                self.dicClient3["fromId"] = fff?["fromId"]
+                self.list3.add(self.dicClient3)
+                
+                print("sxssssss", self.dicClient3["text"] as? String)
+                
+                UserDefaults.standard.set(self.dicClient3 , forKey: "Messages")
+                print("rrrrrrr",UserDefaults.standard.array(forKey: "Messages"))
+                
+                
+                UserDefaults.standard.set(self.dicClient3["text"] as? String, forKey: "theMessages")
+                UserDefaults.standard.set(self.dicClient3["toId"] as? String, forKey: "receiveId")
+            }
+        })
+
+    }
+    
+    
     
     func clearAllUserDefaultsData(){
         let userDefaults = UserDefaults.standard
@@ -114,7 +179,9 @@ class LoginViewController: UIViewController,  UIBarPositioningDelegate, UITextFi
         }
         UserDefaults.standard.set(list2, forKey: "theUserData")
         UserDefaults.standard.set(list, forKey: "theEmailData")
-
+        
+        
+        observeMessages()
     }
 
     
@@ -159,10 +226,15 @@ class LoginViewController: UIViewController,  UIBarPositioningDelegate, UITextFi
         }
         
         UserDefaults.standard.set(userEmail, forKey: "userRegistEmail")
+
+        
+        UserDefaults.standard.set(self.dicClient3["text"] as? String, forKey: "theMessages")
+        UserDefaults.standard.set(self.dicClient3["toId"] as? String, forKey: "receiveId")
+        
+        print("rffrfrrrfrfr",UserDefaults.standard.string(forKey: "theMessages"))
         
         performSegue(withIdentifier: "login", sender: nil)
         
-
     }
     
 

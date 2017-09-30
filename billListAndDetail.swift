@@ -22,7 +22,7 @@ class billListAndDetail: UITableViewController, ToDoItemDelegate  {
     var owner = ""
     var loginName = UserDefaults.standard.string(forKey: "userRegistEmail")
     var bookId = ""
-    
+
     
     @IBOutlet weak var hello: UILabel!
     
@@ -30,11 +30,21 @@ class billListAndDetail: UITableViewController, ToDoItemDelegate  {
     
     override func viewDidLoad() {
         
+        print("bobobobobobobo",UserDefaults.standard.string(forKey: "theMessages"))
+        print("bobobobobobobo",UserDefaults.standard.string(forKey: "receiveId"))
         
         if UserDefaults.standard.string(forKey: loginName!) != nil{
             bookId = UserDefaults.standard.string(forKey: loginName!)!
         }
 
+        if UserDefaults.standard.string(forKey: "theMessages")  != nil{
+            var message  = UserDefaults.standard.string(forKey: "receiveId")
+            if (message == loginName){
+                displayMyAlertMessage(userMessage: UserDefaults.standard.string(forKey: "theMessages")!)
+                UserDefaults.standard.set(nil, forKey: "theMessage")
+            }
+        }
+        
         hello.text = "  Hello:  \(loginName!) !  welcome to the app"
         refresh = UIRefreshControl()
         super.viewDidLoad()
@@ -127,8 +137,6 @@ class billListAndDetail: UITableViewController, ToDoItemDelegate  {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //let cell = UITableViewCell(style:UITableViewCellStyle.default,reuseIdentifier : "Cell")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let client = self.list[indexPath.row] as! [String:String]

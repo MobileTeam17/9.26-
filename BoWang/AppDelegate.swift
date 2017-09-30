@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 import UIKit
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //let client = MSClient(applicationURLString: "https://mymobileapp.azure-mobile.net/", applicationKey: "aAaBbBcCc…")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         // Override point for customization after application launch.
         self.client = MSClient(
             applicationURLString:"https://bowang.azurewebsites.net"

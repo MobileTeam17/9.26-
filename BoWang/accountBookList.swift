@@ -20,7 +20,8 @@
 import Foundation
 import UIKit
 import CoreData
-
+import Firebase
+import FirebaseDatabase
 
 
 class accountBookList: UITableViewController, ToDoItemDelegate3 {
@@ -30,6 +31,7 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
     var dicClient = [String:Any]()
     var refresh : UIRefreshControl!
     var theValue = ""
+    var theMessage = ""
     var loginName = UserDefaults.standard.string(forKey: "userRegistEmail")
     
     var selectedBookId = ""
@@ -38,9 +40,12 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
     var itemTable = (UIApplication.shared.delegate as! AppDelegate).client.table(withName: "AccountBook")
     var maxmumBookId = 0
 
+    var ref: DatabaseReference?
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
+
         refresh = UIRefreshControl()
 
         itemTable2.read { (result, error) in
@@ -78,7 +83,7 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
             
             }
         }
-    
+        
 
         getBookList()
 
@@ -94,6 +99,9 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
         self.onRefresh(self.refreshControl)
         
         getBookList()
+        if (theMessage != ""){
+            displayMyAlertMessage(userMessage: theMessage)
+        }
         
     }
     
@@ -124,6 +132,19 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
     }
     
     
+
+    
+    func displayMyAlertMessage(userMessage: String)  {
+        let myAlert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    
     func showExample(_ segueId: String) {
         performSegue(withIdentifier: segueId, sender: nil)
     }
@@ -131,6 +152,10 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
     
     func onRefresh(_ sender: UIRefreshControl!) {
         tableView.reloadData()
+        
+        if (theMessage != ""){
+            displayMyAlertMessage(userMessage: theMessage)
+        }
         
         refresh.endRefreshing()
         
@@ -165,6 +190,7 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         print("the size is : ", list.count)
+
         return list.count
     }
     
@@ -209,6 +235,12 @@ class accountBookList: UITableViewController, ToDoItemDelegate3 {
             getMaxBookId()
             print("12121212112112 : ", maxmumBookId)
         }
+        
+        if(segue.identifier == "getLocation") {
+            //UserDefaults.standard.set(selectedBookId, forKey: "selectedBookId")
+            
+        }
+        
         
         if(segue.identifier == "billListAndDetail") {
             UserDefaults.standard.set(selectedBookId, forKey: "selectedBookId")

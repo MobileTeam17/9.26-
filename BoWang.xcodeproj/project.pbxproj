@@ -11,9 +11,15 @@
 		2D1694141F78B2BC00825E49 /* addNewBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1694131F78B2BC00825E49 /* addNewBook.swift */; };
 		2D1E65991F75FE1700AF1ABC /* userListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E65981F75FE1700AF1ABC /* userListPage.swift */; };
 		2D1E659D1F7662DD00AF1ABC /* addNewUserToBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E659C1F7662DD00AF1ABC /* addNewUserToBook.swift */; };
+		2D60FC4F1F7E2F600091E85D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D60FC4E1F7E2F600091E85D /* CoreLocation.framework */; };
+		2D60FC511F7E30850091E85D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60FC501F7E30850091E85D /* MapViewController.swift */; };
+		2D60FC531F7E3E390091E85D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D60FC521F7E3E390091E85D /* MapKit.framework */; };
+		2D7A95811F7F8F2800D50CD4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7A95801F7F8F2800D50CD4 /* Message.swift */; };
 		2D8A540F1F75363B002BDDC2 /* billListAndDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A540E1F75363B002BDDC2 /* billListAndDetail.swift */; };
 		2D8A54111F7545F5002BDDC2 /* accountBookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A54101F7545F5002BDDC2 /* accountBookList.swift */; };
 		2D8A54131F755DE1002BDDC2 /* addNewBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A54121F755DE1002BDDC2 /* addNewBill.swift */; };
+		2DC458151F7F42D800B1AE52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DC458141F7F42D800B1AE52 /* GoogleService-Info.plist */; };
+		9782A265137AF57EDDD14C80 /* Pods_BoWang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B69317BAAF010196DC83B2 /* Pods_BoWang.framework */; };
 		9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B31DE4EF8000650581 /* SafariServices.framework */; };
 		9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C35A4B51DE4EF8500650581 /* Security.framework */; };
 		9CA121761DAC7FFD000C2FCA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA121751DAC7FFD000C2FCA /* WebKit.framework */; };
@@ -32,9 +38,15 @@
 		2D1694131F78B2BC00825E49 /* addNewBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNewBook.swift; sourceTree = "<group>"; };
 		2D1E65981F75FE1700AF1ABC /* userListPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userListPage.swift; sourceTree = "<group>"; };
 		2D1E659C1F7662DD00AF1ABC /* addNewUserToBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNewUserToBook.swift; sourceTree = "<group>"; };
+		2D60FC4E1F7E2F600091E85D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2D60FC501F7E30850091E85D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2D60FC521F7E3E390091E85D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2D7A95801F7F8F2800D50CD4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2D8A540E1F75363B002BDDC2 /* billListAndDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = billListAndDetail.swift; path = ../billListAndDetail.swift; sourceTree = "<group>"; };
 		2D8A54101F7545F5002BDDC2 /* accountBookList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accountBookList.swift; sourceTree = "<group>"; };
 		2D8A54121F755DE1002BDDC2 /* addNewBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNewBill.swift; sourceTree = "<group>"; };
+		2DC458141F7F42D800B1AE52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73600338162DCEF5F49277C9 /* Pods-BoWang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoWang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoWang/Pods-BoWang.debug.xcconfig"; sourceTree = "<group>"; };
 		9C35A4B31DE4EF8000650581 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		9C35A4B51DE4EF8500650581 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9CA121751DAC7FFD000C2FCA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -49,6 +61,8 @@
 		E9961BE81F7382A1008F29A9 /* QSTodoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QSTodoDataModel.xcdatamodel; sourceTree = "<group>"; };
 		E9961BEA1F73C3CB008F29A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9961BEC1F73C569008F29A9 /* signupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		ED847818F8CF6B9CA1CBE996 /* Pods-BoWang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoWang.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoWang/Pods-BoWang.release.xcconfig"; sourceTree = "<group>"; };
+		F9B69317BAAF010196DC83B2 /* Pods_BoWang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoWang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +70,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D60FC531F7E3E390091E85D /* MapKit.framework in Frameworks */,
+				2D60FC4F1F7E2F600091E85D /* CoreLocation.framework in Frameworks */,
 				9C35A4B61DE4EF8500650581 /* Security.framework in Frameworks */,
 				9C35A4B41DE4EF8000650581 /* SafariServices.framework in Frameworks */,
 				9CA121761DAC7FFD000C2FCA /* WebKit.framework in Frameworks */,
 				A3BBD77D1C05181600DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */,
+				9782A265137AF57EDDD14C80 /* Pods_BoWang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +86,12 @@
 		9CA121741DAC7FFD000C2FCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D60FC521F7E3E390091E85D /* MapKit.framework */,
+				2D60FC4E1F7E2F600091E85D /* CoreLocation.framework */,
 				9C35A4B51DE4EF8500650581 /* Security.framework */,
 				9C35A4B31DE4EF8000650581 /* SafariServices.framework */,
 				9CA121751DAC7FFD000C2FCA /* WebKit.framework */,
+				F9B69317BAAF010196DC83B2 /* Pods_BoWang.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,6 +102,7 @@
 				A2D9CBC01943C2540017F096 /* BoWang */,
 				A2D9CBBF1943C2540017F096 /* Products */,
 				9CA121741DAC7FFD000C2FCA /* Frameworks */,
+				A981E504C3696A624533F057 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +119,7 @@
 			children = (
 				2D8A540E1F75363B002BDDC2 /* billListAndDetail.swift */,
 				E9961BE71F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld */,
+				2DC458141F7F42D800B1AE52 /* GoogleService-Info.plist */,
 				A2D9CBC31943C2540017F096 /* AppDelegate.swift */,
 				A2D9CBCA1943C2540017F096 /* Main.storyboard */,
 				A2D9CBCD1943C2540017F096 /* Images.xcassets */,
@@ -113,6 +135,8 @@
 				2D1E659C1F7662DD00AF1ABC /* addNewUserToBook.swift */,
 				2D162A611F77A34F003BC2E1 /* shareBookId.swift */,
 				2D1694131F78B2BC00825E49 /* addNewBook.swift */,
+				2D60FC501F7E30850091E85D /* MapViewController.swift */,
+				2D7A95801F7F8F2800D50CD4 /* Message.swift */,
 			);
 			path = BoWang;
 			sourceTree = "<group>";
@@ -134,6 +158,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		A981E504C3696A624533F057 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73600338162DCEF5F49277C9 /* Pods-BoWang.debug.xcconfig */,
+				ED847818F8CF6B9CA1CBE996 /* Pods-BoWang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2D9CBDD1943C2540017F096 /* Build configuration list for PBXNativeTarget "BoWang" */;
 			buildPhases = (
+				F9001587D8A1F255B02A92E8 /* [CP] Check Pods Manifest.lock */,
 				A2D9CBBA1943C2540017F096 /* Sources */,
 				A2D9CBBB1943C2540017F096 /* Frameworks */,
 				A2D9CBBC1943C2540017F096 /* Resources */,
+				C01A03E0B3E3E227F9262496 /* [CP] Embed Pods Frameworks */,
+				14EEEA231B3A464447FF0487 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,12 +232,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2D9CBCC1943C2540017F096 /* Main.storyboard in Resources */,
+				2DC458151F7F42D800B1AE52 /* GoogleService-Info.plist in Resources */,
 				A2D9CBCE1943C2540017F096 /* Images.xcassets in Resources */,
 				A31A89F71BF3FDFA00C7B656 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14EEEA231B3A464447FF0487 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoWang/Pods-BoWang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C01A03E0B3E3E227F9262496 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BoWang/Pods-BoWang-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoWang/Pods-BoWang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9001587D8A1F255B02A92E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoWang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2D9CBBA1943C2540017F096 /* Sources */ = {
@@ -215,7 +310,9 @@
 				E9961BED1F73C569008F29A9 /* signupViewController.swift in Sources */,
 				E9961BE91F7382A1008F29A9 /* QSTodoDataModel.xcdatamodeld in Sources */,
 				2D162A621F77A34F003BC2E1 /* shareBookId.swift in Sources */,
+				2D60FC511F7E30850091E85D /* MapViewController.swift in Sources */,
 				2D1694141F78B2BC00825E49 /* addNewBook.swift in Sources */,
+				2D7A95811F7F8F2800D50CD4 /* Message.swift in Sources */,
 				2D8A54131F755DE1002BDDC2 /* addNewBill.swift in Sources */,
 				2D1E65991F75FE1700AF1ABC /* userListPage.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
@@ -327,6 +424,7 @@
 		};
 		A2D9CBDE1943C2540017F096 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73600338162DCEF5F49277C9 /* Pods-BoWang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -349,6 +447,7 @@
 		};
 		A2D9CBDF1943C2540017F096 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED847818F8CF6B9CA1CBE996 /* Pods-BoWang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
