@@ -606,7 +606,7 @@
                             </connections>
                         </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uLN-Nd-Ag2">
-                            <rect key="frame" x="117" y="7" width="142" height="30"/>
+                            <rect key="frame" x="116.5" y="7" width="142" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="photo"/>
                             <connections>
@@ -704,7 +704,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61g-gF-jlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3088" y="1963"/>
+            <point key="canvasLocation" x="3087.1999999999998" y="1962.3688155922041"/>
         </scene>
         <!--addItem-->
         <scene sceneID="hCw-uq-4Is">
@@ -1036,6 +1036,6 @@
         <segue reference="gLU-g7-1Z2"/>
         <segue reference="69O-FB-Npu"/>
         <segue reference="7V7-Sp-cwL"/>
-        <segue reference="Ls6-Cw-kF1"/>
+        <segue reference="prC-s8-0ff"/>
     </inferredMetricsTieBreakers>
 </document>

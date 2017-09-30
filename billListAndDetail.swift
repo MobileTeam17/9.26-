@@ -145,6 +145,10 @@ class billListAndDetail: UITableViewController, ToDoItemDelegate  {
         str2.remove(at: str2.index(before: str2.endIndex))
         
         cell.detailTextLabel?.text = "\(str) \(str2) \(str3)"
+
+
+//未完成 insert picture to bill
+        cell.imageView?.image = UIImage(named: "test1")
         return cell
     }
     
